@@ -1,2 +1,4 @@
 # ProfitCalc
-Calculation profit using FIFO method of determine cost price
+Расчет прибыльности с использованием метода FIFO для вычисления себестоимости.
+
+Клонируйте репозиторий, запустите mvn clean package. Создастся папка target в котором будет jar файл с именем moysklad-0.1.0. Запустите его командой java -jar target\moysklad-0.1.0.jar и начните ввод команд. По окончании ввода нужно ввести end для вывода результата.
