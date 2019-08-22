@@ -1,9 +1,4 @@
 import java.util.Scanner;
-import java.text.ParseException;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Queue;
-import java.util.LinkedList;
 import java.util.Iterator;
 
 public class MainClass {
@@ -12,6 +7,8 @@ public class MainClass {
 
 		while (scanner.hasNext()) {
 			String inputCommand = scanner.nextLine();
+			if (inputCommand.equals(""))
+				continue;
 			if (inputCommand.equals("end"))
 				break;
 			parseCommand(inputCommand);
