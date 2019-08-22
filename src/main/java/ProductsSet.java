@@ -3,10 +3,10 @@ import java.util.HashSet;
 
 public class ProductsSet {
 	private static ProductsSet singleton;
-	private Set<Product> productsSet;
+	private Set<Product> set;
 
 	private ProductsSet() {
-		productsSet = new HashSet<Product>();
+		set = new HashSet<Product>();
 	}
 	public static synchronized ProductsSet getInstance() {
 		if (singleton == null) {
@@ -15,7 +15,7 @@ public class ProductsSet {
 		return singleton;
 	}
 	public Set<Product> getSet() {
-		return productsSet;
+		return set;
 	}
 	public void setSetnull() { singleton = null; }
 }

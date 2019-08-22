@@ -3,10 +3,10 @@ import java.util.LinkedList;
 
 public class CommandsQueue {
 	private static CommandsQueue singleton;
-	private Queue<Command> commandsQueue;
+	private Queue<Command> queue;
 
 	private CommandsQueue() {
-		commandsQueue = new LinkedList<Command>();
+		queue = new LinkedList<Command>();
 	}
 	public static synchronized CommandsQueue getInstance() {
 		if (singleton == null) {
@@ -15,11 +15,11 @@ public class CommandsQueue {
 		return singleton;
 	}
 	public Queue<Command> getQueue() {
-		return commandsQueue;
+		return queue;
 	}
 	public String getResults() {
 		String results = "";
-		for (Command command : commandsQueue)
+		for (Command command : queue)
 			results += command.getStatus() + "\n";
 		return results;
 	}
